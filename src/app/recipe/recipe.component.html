@@ -1,0 +1,20 @@
+<div class="container row mt-5 bg-dark ms-3">
+    <div class="col-lg-5 col-sm-6">
+        <img class="img-fluid rounded mt-3" height="400px" src={{singleRecipe.image}} alt="">
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-6 mt-2">
+        <h4 style="color: chocolate;">{{singleRecipe.name}}</h4>
+        <h6 style="font-style: italic; color: rgb(201, 191, 9);">Instructions: <p class="fw-light mt-1" style="font-style: normal; color: mintcream;">{{singleRecipe.instructions}}</p></h6>
+        
+        <h6 style="font-style: italic; color: rgb(201, 191, 9);">Ingredients:</h6>
+        <ol style="color: mintcream;">
+            <li *ngFor="let ingredient of singleRecipe.ingredients">{{ ingredient }}</li>
+        </ol>
+        <div class="d-flex align-items-center justify-center mb-2 text-light"><i class="fa-regular fa-clock fa-bounce text-warning me-2"></i> :{{singleRecipe.cookTimeMinutes}}  minutes</div>
+        <h6 style="font-style: italic; color: rgb(201, 191, 9);">Difficuly: <span style="font-style: normal;font-weight: 100;color: mintcream;">{{singleRecipe.difficulty}}</span></h6>
+        <h6 style="font-style: italic;color: rgb(201, 191, 9);">Meal Type: <span style="font-style: normal;font-weight: 100;color: mintcream;">{{singleRecipe.mealType}}</span></h6>
+        <h6 style="font-style: italic;color: rgb(201, 191, 9);">Cuisine: <span style="font-style: normal;font-weight: 100;color: mintcream;">{{singleRecipe.cuisine}}</span></h6>
+    </div>
+</div>
+

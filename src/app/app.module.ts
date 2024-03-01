@@ -9,13 +9,17 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { SearchPipe } from './pipe/search.pipe';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import { RecipeComponent } from './recipe/recipe.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoryComponent,
     SearchPipe,
-    HeaderComponent
+    HeaderComponent,
+    RecipeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

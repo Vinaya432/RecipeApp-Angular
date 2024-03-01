@@ -18,4 +18,8 @@ export class ApiServiceService {
     return this.http.get(`${this.D_URL}?category=${category}`)
   }
 
+  getARecipeAPI(id:string){
+    return this.http.get(`${this.D_URL}/${id}`)
+  }
+
 }

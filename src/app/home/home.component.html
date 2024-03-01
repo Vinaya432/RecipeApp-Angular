@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="d-flex align-items-center justify-content-center mt-5">
+      <input [(ngModel)]="searchKey" class="form-control rounded-pill border shadow w-75" type="text" placeholder="Search recipes by cuisine or by recipe name">
+    </div>
+    <app-category (categorySelected)="onCategorySelected($event)"></app-category>
+    <div class="row mt-5">
+      <div *ngFor="let recipe of recipes | search:searchKey |paginate:{itemsPerPage: 10, currentPage: page} ; let i=index" class="col col-lg-3 col-md-4 col-sm-6 mb-3">
+          <div  class="card me-2" style="width: 16rem;">
+             <a routerLink="/{{recipe.id}}"> <img src={{recipe.image}} class="card-img-top" height="200px" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title text-center">{{recipe.name}}</h5>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- display pagination cursor -->
+  <div class="text-center mt-5"> <pagination-controls (pageChange)="page = $event"></pagination-controls></div> 
